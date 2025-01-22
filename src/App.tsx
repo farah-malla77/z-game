@@ -15,6 +15,7 @@ function App() {
 					<GridItem area='side'>side</GridItem>
 				</Show>
 				<GridItem area='main'>
+					<GridCardGame/>
 				</GridItem>
 			</Grid>
 		</>
