@@ -7,7 +7,7 @@ import getCroppedImageURL from "../services/image-url";
 interface Props {
     game: Game;
 }
-const CardGames = ({ game }: Props) => {
+const GameCard = ({ game }: Props) => {
     return (
         <Card>
             <CardBody>
@@ -33,4 +33,4 @@ const CardGames = ({ game }: Props) => {
     )
 }
 
-export default CardGames
+export default GameCard
