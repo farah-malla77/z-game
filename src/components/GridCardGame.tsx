@@ -10,7 +10,7 @@ const GridCardGame = () => {
     return (
         <>
             {error && <Text>{error}</Text>}
-            <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={10} padding={10}>
+            <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={4} padding={10}>
                 {isLoading && Skeleton.map((Skeleton) => 
                 <GameCardContainer>
                     <SkeletonCard key={Skeleton}></SkeletonCard>
