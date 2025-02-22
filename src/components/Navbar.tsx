@@ -10,7 +10,7 @@ const Navbar = ({onSearch}: Props) => {
 	return (
 		<Flex padding={'2px 20px'} justifyContent='space-between' marginBottom={6}>
 			<HStack width={'16%'}>
-				<Image src={logo} boxSize='40px' />
+				<Image src={logo} boxSize='40px' objectFit='cover'/>
 				<Text whiteSpace={'noWrap'} className='orbitron-font-title' padding={'0 0 0 10px'}>Z Game</Text>
 			</HStack>
 			<HStack width={'85%'}>

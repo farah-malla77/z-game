@@ -17,16 +17,16 @@ const GameCard = ({ game }: Props) => {
                     borderRadius='lg'
                 />
                 <Stack mt='6' spacing='3'>
-                    <Heading size='md'>{game.name}</Heading>
-                    <Text>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolores eaque illum necessitatibus quis consequatur autem labore voluptas voluptate consectetur.
-                    </Text>
-                    {/* <Text color='blue.600' fontSize='2xl'> */}
-                    {/* </Text> */}
                     <HStack justifyContent={"space-between"}>
                         <PlatFormIconList platforms={game.parent_platforms.map((p)=> p.platform)}/>
                         <CriticScore score={game.metacritic}/>
                     </HStack>
+                    <Heading size='md'>{game.name}</Heading>
+                    <Text>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    </Text>
+                    {/* <Text color='blue.600' fontSize='2xl'> */}
+                    {/* </Text> */}
                 </Stack>
             </CardBody>
         </Card>
