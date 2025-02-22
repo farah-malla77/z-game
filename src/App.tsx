@@ -13,6 +13,7 @@ function App() {
 	const [ selectedGenre, setSelectedGenre ]= useState<Genre | null>(null);
 	const [ selectedPlatform, setSelectedPlatform ]= useState<Platform | null>(null);
 	const [ selectedOrder, setSelectedOrder ]= useState<string | ''>('');
+	const [ searchText, setSearchText ]= useState<string | ''>('');
 	return (
 		<>
 			<Grid templateAreas={{
@@ -25,7 +26,7 @@ function App() {
 			}}
 			>
 				<GridItem area='nav'>
-					<Navbar/>
+					<Navbar onSearch={(searchText)=>setSearchText(searchText)}/>
 				</GridItem>
 				<Show above='lg'>
 					<GridItem area='side' paddingX={'5px'}>
@@ -37,7 +38,7 @@ function App() {
 						<PlatformsSelector selectedPlatform={selectedPlatform} onSelectedPlatform={(platform) => setSelectedPlatform(platform)}/>
 						<SortSelector selectedOrder={selectedOrder} onSelectedOrder={(order)=>setSelectedOrder(order)}/>
 					</HStack>
-					<GridCardGame selectedOrder={selectedOrder} selectedGenre={selectedGenre} selectedPlatform={selectedPlatform}/>
+					<GridCardGame searchText={searchText} selectedOrder={selectedOrder} selectedGenre={selectedGenre} selectedPlatform={selectedPlatform}/>
 				</GridItem>
 			</Grid>
 		</>

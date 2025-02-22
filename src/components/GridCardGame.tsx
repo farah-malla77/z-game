@@ -8,10 +8,11 @@ import { Genre } from '../hooks/useGenres';
 interface Props{
     selectedGenre : Genre | null;
     selectedPlatform : Platform | null;
-    selectedOrder : string | ''
+    selectedOrder : string | '';
+    searchText : string | '';
 }
-const GridCardGame = ({selectedGenre, selectedPlatform, selectedOrder} : Props) => {
-    const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform, selectedOrder);
+const GridCardGame = ({selectedGenre, selectedPlatform, selectedOrder, searchText} : Props) => {
+    const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform, selectedOrder, searchText);
     const Skeleton = [1, 2, 3, 4, 5, 6];
     return (
         <>
